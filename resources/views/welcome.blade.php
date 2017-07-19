@@ -95,7 +95,7 @@
                 <div class="title m-b-md">
                     Form test                
                 </div>
-                ...
+                
                 <div class="links">
                     {{ Form::open(array('url' => 'formresult'))}}
                         {{Form::label('Nome:')}}
