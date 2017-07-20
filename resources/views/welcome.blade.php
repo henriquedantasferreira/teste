@@ -86,6 +86,7 @@
                     <a href="{{URL::route('helloworld')}}">Hello World</a>
                     <a href="{{URL::route('outracoisa')}}">Outra coisa</a>
                     <a href="{{URL::route('outraoutracoisa')}}?nome=jose">Experimentar o GET</a>
+                    <a href="{{URL::route('registeredusers')}}">Ver users da DB</a>
                     <a href="https://github.com/henriquedantasferreira/teste">GitHub</a>
                 </div>
                 </div>
