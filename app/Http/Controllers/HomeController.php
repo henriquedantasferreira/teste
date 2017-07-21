@@ -95,6 +95,10 @@ class HomeController extends Controller
         return view('HomeControllerTest', ['name' => 'oioioi']);
     }
 
+    public function elastic(){
+        return view('createindex');
+    }
+
     public function outracoisa(){
         return view('welcome', ['name' => 'outra coisa']);
     }
@@ -114,6 +118,14 @@ class HomeController extends Controller
     public function formresult(){
 
         return view('welcome',['name' => $_POST['username']]);
+    }
+
+    public function addindexels(){
+        return view('elasticview', ['addindex'=>$_POST['el_index'], 'type'=>$_POST['el_type'], 'id'=>$_POST['el_id'], 'body'=>$_POST['el_body']]);
+    }
+
+    public function searchindexls(){
+        return view('elasticview', ['index' => $_POST['el_searchindex']]);
     }
     
 }

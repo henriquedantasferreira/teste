@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', 'HomeController@welcome');
+Route::get('/', 'HomeController@elastic');
 Route::get('/helloworld', 'HomeController@helloworld')->name('helloworld');
 Route::get('/outracoisa', 'HomeController@outracoisa')->name('outracoisa');
 Route::get('/outraoutracoisa','HomeController@outraoutracoisa')->name('outraoutracoisa');
 Route::post('/formresult', 'HomeController@formresult')->name('formresult');
 Route::get('/registeredusers', 'newController@registeredusers')->name('registeredusers');
+Route::post('/addindexels', 'HomeController@addindexels')->name('addindexels');
+Route::post('/searchindexls', 'HomeController@searchindexls')->name('searchindexls');
 
 
 //Route::get('/outraoutracoisa?name="Jose"', 'HomeController@outraoutracoisa')->name('outraoutracoisa');
