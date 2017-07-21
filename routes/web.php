@@ -19,7 +19,7 @@ Route::post('/formresult', 'HomeController@formresult')->name('formresult');
 Route::get('/registeredusers', 'newController@registeredusers')->name('registeredusers');
 Route::post('/addindexels', 'HomeController@addindexels')->name('addindexels');
 Route::post('/searchindexls', 'HomeController@searchindexls')->name('searchindexls');
-
+Route::post('/deleteindexls', 'HomeController@deleteindexls')->name('deleteindexls');
 
 //Route::get('/outraoutracoisa?name="Jose"', 'HomeController@outraoutracoisa')->name('outraoutracoisa');
 

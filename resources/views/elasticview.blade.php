@@ -23,7 +23,9 @@
 
         try {
             $response = $client->index($params);
+            echo "<pre>";
             print_r($response);
+            echo "</pre>";
         }
         catch (Exception $e) {
             $last = $client->transport->getLastConnection()->getLastRequestInfo();
@@ -32,14 +34,36 @@
         }
     }
 
-    if(isset($index))
+    if(isset($searchindex))
     {
         $params = [
-            'index' => $index
+            'index' => $searchindex
         ];
         try {
             $response = $client->search($params);
+            echo "<pre>";
             print_r($response);
+            echo "</pre>";
+        }
+        catch (Exception $e)
+        {
+            echo "Index not found...";
+            /*$last = $client->transport->getLastConnection()->getLastRequestInfo();
+            $last['response']['error'] = [];
+            print_r($last);*/
+        }
+    }
+    
+   if(isset($deleteindex))
+    {
+        $params = [
+            'index' => $deleteindex
+        ];
+        try {
+            $response = $client->indices()->delete($params);
+            echo "<pre>";
+            print_r($response);
+            echo "</pre>";
         }
         catch (Exception $e)
         {
@@ -48,11 +72,4 @@
             print_r($last);
         }
     }
-    
-   
-
-
-    //
-    /*$response = $client->index($params);
-    print_r($response);*/
 ?>

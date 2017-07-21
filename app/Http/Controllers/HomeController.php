@@ -125,7 +125,11 @@ class HomeController extends Controller
     }
 
     public function searchindexls(){
-        return view('elasticview', ['index' => $_POST['el_searchindex']]);
+        return view('elasticview', ['searchindex' => $_POST['el_searchindex']]);
+    }
+
+    public function deleteindexls(){
+        return view('elasticview', ['deleteindex' => $_POST['el_deleteindex']]);
     }
     
 }

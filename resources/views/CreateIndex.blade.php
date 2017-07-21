@@ -25,6 +25,15 @@
                 {{Form::submit('Search')}}
             {{ Form::close() }}
         </div>
+
+        <div>
+            <h1>delete my current indexes... </h1>
+            {{ Form::open(array('url' => 'deleteindexls'))}}
+                {{Form::label('Index to delete:')}}
+                {{Form::text('el_deleteindex')}}
+                {{Form::submit('Delete')}}
+            {{ Form::close() }}
+        </div>
     </body>
 
 </html>
