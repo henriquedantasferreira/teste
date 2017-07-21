@@ -3,7 +3,7 @@
 
     $hosts = [
         [
-            'host' => '172.17.0.3'
+            'host' => '172.17.0.3' // IP Address of the container with ElasticSearch
         ]
     ];
 
@@ -17,7 +17,9 @@
             'index' => $addindex,
             'type' => $type,
             'id' => $id,
-            'body' => ['testField' => $body]
+            'body' => [
+                'testField' => $body
+            ]
         ];
 
 
