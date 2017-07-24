@@ -39,7 +39,8 @@
     if(isset($searchindex))
     {
         $params = [
-            'index' => $searchindex
+            'index' => $searchindex,
+            'size' => 10000
         ];
         try {
             $response = $client->search($params);
